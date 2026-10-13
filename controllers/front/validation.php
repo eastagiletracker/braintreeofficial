@@ -107,7 +107,7 @@ class BraintreeOfficialValidationModuleFrontController extends BraintreeOfficial
                 'email' => $customer->email,
                 'billingAddress' => [
                     'givenName' => iconv('utf-8', 'ascii//TRANSLIT', $customer->firstname),
-                    'surneme' => $customer->lastname,
+                    'surname' => iconv('utf-8', 'ascii//TRANSLIT', $customer->lastname),
                     'phoneNumber' => $address->phone,
                     'streetAddress' => $address->address1,
                     'locality' => $address->city,
